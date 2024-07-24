@@ -1,0 +1,59 @@
+import java.util.Scanner;
+class grade{
+    void score(int mark1 ,int mark2, int mark3, int mark4, int mark5)
+    {
+        double total = mark1 + mark2 + mark3 + mark4 + mark5;
+        System.out.println("total mark : "+total);
+        double avg = (total/5);
+        System.out.println("average percentage : "+avg);
+        if(avg<30)
+        {
+            System.out.println("your grade : F ");
+        }
+        else if(avg>=30 && avg<40)
+        {
+            System.out.println("your grade : D ");
+        }
+        else if(avg>=40 && avg<50)
+        {
+            System.out.println("your grade : C2 ");
+        }
+        else if(avg>=50 && avg<60)
+        {
+            System.out.println("your grade : C1 ");
+        }
+        else if(avg>=60 && avg<70)
+        {
+            System.out.println("your grade : B2 ");
+        }
+        else if(avg>=70 && avg<80)
+        {
+            System.out.println("your grade : B1 ");
+        }
+        else if(avg>=80 && avg<90)
+        {
+            System.out.println("your grade : A2 ");
+        }
+        else if(avg>=90 && avg<100)
+        {
+            System.out.println("your grade : A1 ");
+        }
+    }
+    public static void main(String args[])
+    {
+        System.out.println("ENTER THE MARK");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("subject 1:");
+        int sub1 = scan.nextInt();
+        System.out.println("subject 2:");
+        int sub2 = scan.nextInt();
+        System.out.println("subject 3:");
+        int sub3 = scan.nextInt();
+        System.out.println("subject 4:");
+        int sub4 = scan.nextInt();
+        System.out.println("subject 5:");
+        int sub5 = scan.nextInt();
+       grade obj1 = new grade();
+       obj1.score(sub1,sub2,sub3,sub4,sub5);
+    }
+}
