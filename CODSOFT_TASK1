@@ -1,0 +1,73 @@
+import java.util.Random;
+import java.util.Scanner;
+public class randomnumber
+{
+	public static int randomnum(int min, int max)
+	{
+		double r = Math.random();
+		int randomnum =(int)(r * (max-min)) + min;
+		return randomnum;
+	}
+	
+	public static void main(String[] args)
+	{
+        while (true)
+        {
+        int count = 0;
+		    Scanner scan = new Scanner(System.in);
+        int r = randomnum(1, 100);
+        System.out.println("LETS BEGIN THE GAME");
+        for(int i=0;i<=4;i++)
+        {
+        System.out.println("enter the number you assumed : ");
+        int s = scan.nextInt();
+        count++;
+          if(r!=s)
+          {  
+          if(r<s)
+          {
+            System.out.println("the random variable is less than entered number");
+          }
+          else if(r>s)
+          {
+            System.out.println("the random variable is greater than entered number");
+          }
+        }
+          else
+          {
+            System.out.println("the random number is : "+r);
+            System.out.println("the random variable : "+r+" is equal to entered number : "+s);
+            break;
+          } 
+        }
+        System.out.println("your number of try is : "+count);
+        if(count==1)
+        {
+            System.out.println("your score : excellent");
+        }
+        else if(count==2)
+        {
+            System.out.println("your score : very good");
+        }
+        else if(count==3)
+        {
+            System.out.println("your score : good");
+        }
+        else if(count>=4)
+        {
+            System.out.println("your score : better performance");
+        }
+        System.out.println("DO YOU WANT TO PLAY AGAIN");
+        Scanner ans = new Scanner(System.in);
+        String a = ans.nextLine();
+        String b = "no";
+        if(a.equals(b))
+        {
+          System.out.println("THANK YOU");
+          break;
+        }
+      }
+    }
+
+}
+
